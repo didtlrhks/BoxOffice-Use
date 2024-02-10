@@ -6,16 +6,37 @@
 //
 
 import SwiftUI
+import BoxOffices
+import Foundation
 
 struct ContentView: View {
+    @State private var movies : [Movie] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(movies, id: \.code) {
+                movie in
+                HStack{
+                    Text("#\(movie.rank)")
+                        .bold()
+                        .foregroundStyle(Color.accentColor)
+                    Text(movie.name)
+                }
+            }
         }
-        .padding()
+        .task {
+            do{
+                movies = try await  BoxOffices.shared.fetchDailyTop10().get()
+            }catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+}
+
+extension BoxOffices {
+    static var shared : BoxOffices {
+        BoxOffices(key: "7306d0e89e947e73d92d934ee1acc721")
     }
 }
 
