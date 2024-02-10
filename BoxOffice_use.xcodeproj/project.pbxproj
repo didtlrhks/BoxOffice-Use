@@ -14,6 +14,7 @@
 		8EFA88542B777F3A006E003E /* BoxOffice_useTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA88532B777F3A006E003E /* BoxOffice_useTests.swift */; };
 		8EFA885E2B777F3A006E003E /* BoxOffice_useUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA885D2B777F3A006E003E /* BoxOffice_useUITests.swift */; };
 		8EFA88602B777F3A006E003E /* BoxOffice_useUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA885F2B777F3A006E003E /* BoxOffice_useUITestsLaunchTests.swift */; };
+		8EFA886E2B777FDA006E003E /* BoxOffices in Frameworks */ = {isa = PBXBuildFile; productRef = 8EFA886D2B777FDA006E003E /* BoxOffices */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFA886E2B777FDA006E003E /* BoxOffices in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = BoxOffice_use;
+			packageProductDependencies = (
+				8EFA886D2B777FDA006E003E /* BoxOffices */,
+			);
 			productName = BoxOffice_use;
 			productReference = 8EFA883F2B777F32006E003E /* BoxOffice_use.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 8EFA88362B777F32006E003E;
+			packageReferences = (
+				8EFA886C2B777FDA006E003E /* XCRemoteSwiftPackageReference "BoxOffice-Library-Ex" */,
+			);
 			productRefGroup = 8EFA88402B777F32006E003E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EFA886C2B777FDA006E003E /* XCRemoteSwiftPackageReference "BoxOffice-Library-Ex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/didtlrhks/BoxOffice-Library-Ex.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EFA886D2B777FDA006E003E /* BoxOffices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EFA886C2B777FDA006E003E /* XCRemoteSwiftPackageReference "BoxOffice-Library-Ex" */;
+			productName = BoxOffices;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EFA88372B777F32006E003E /* Project object */;
 }

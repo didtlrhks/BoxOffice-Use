@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "boxoffice-library-ex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/didtlrhks/BoxOffice-Library-Ex.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0bea5abbebf795f6032abda385a788f19b1cf31e"
+      }
+    }
+  ],
+  "version" : 2
+}
